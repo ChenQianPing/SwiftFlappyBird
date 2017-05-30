@@ -14,6 +14,8 @@
 		343274291D4DEB7B003841E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343274271D4DEB7B003841E5 /* Main.storyboard */; };
 		3432742B1D4DEB7B003841E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432742A1D4DEB7B003841E5 /* Assets.xcassets */; };
 		3432742E1D4DEB7B003841E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3432742C1D4DEB7B003841E5 /* LaunchScreen.storyboard */; };
+		343274381D4DEBA1003841E5 /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343274371D4DEBA1003841E5 /* ReadMe.swift */; };
+		3432743A1D4DEC8D003841E5 /* bird.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 343274391D4DEC8D003841E5 /* bird.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3432742A1D4DEB7B003841E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3432742D1D4DEB7B003841E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3432742F1D4DEB7B003841E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343274371D4DEBA1003841E5 /* ReadMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
+		343274391D4DEC8D003841E5 /* bird.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bird.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3432742A1D4DEB7B003841E5 /* Assets.xcassets */,
 				3432742C1D4DEB7B003841E5 /* LaunchScreen.storyboard */,
 				3432742F1D4DEB7B003841E5 /* Info.plist */,
+				343274371D4DEBA1003841E5 /* ReadMe.swift */,
+				343274391D4DEC8D003841E5 /* bird.atlas */,
 			);
 			path = SwiftFlappyBird;
 			sourceTree = "<group>";
@@ -97,11 +103,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ChenQianPing;
 				TargetAttributes = {
 					3432741B1D4DEB7B003841E5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GV3E426MWC;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -131,6 +139,7 @@
 				343274221D4DEB7B003841E5 /* GameScene.sks in Resources */,
 				3432742E1D4DEB7B003841E5 /* LaunchScreen.storyboard in Resources */,
 				3432742B1D4DEB7B003841E5 /* Assets.xcassets in Resources */,
+				3432743A1D4DEC8D003841E5 /* bird.atlas in Resources */,
 				343274291D4DEB7B003841E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				343274241D4DEB7B003841E5 /* GameScene.swift in Sources */,
+				343274381D4DEBA1003841E5 /* ReadMe.swift in Sources */,
 				343274261D4DEB7B003841E5 /* GameViewController.swift in Sources */,
 				343274201D4DEB7B003841E5 /* AppDelegate.swift in Sources */,
 			);
@@ -184,8 +194,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -229,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -249,6 +263,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -257,10 +272,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = GV3E426MWC;
 				INFOPLIST_FILE = SwiftFlappyBird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenqp.SwiftFlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -268,10 +287,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = GV3E426MWC;
 				INFOPLIST_FILE = SwiftFlappyBird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenqp.SwiftFlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -294,6 +317,7 @@
 				343274341D4DEB7B003841E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
